@@ -8,7 +8,7 @@ public class Main {
         long allocated = 0;
         SoftReference softReference = null;
         while (true) {
-            softReference = new SoftReference(softReference);
+            softReference = new SoftReference<>(new Object());
             allocated++;
             long end = System.currentTimeMillis();
             long elapsed = end - start;
